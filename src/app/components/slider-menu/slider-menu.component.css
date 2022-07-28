@@ -1,0 +1,10 @@
+.tab {
+    width: 98px;
+    height: 31px;
+    padding: 3px 39px 0 40px;
+    border-radius: 2px;
+    border: solid 1px #1797ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

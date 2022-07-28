@@ -1,1 +1,48 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    margin: 0;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem 0;
+    margin: 0 1rem 0;
+}
+
+/** system **/
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.col {
+    flex-direction: column;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.align-item-center {
+    align-items: center;
+}
+
+/* RESPONSIVE */
+@media only screen and (max-width: 959.98px) {
+    .header {
+     justify-content: center;    
+    }
+ }
+ 
+ @media only screen and (min-width: 960px) and (max-width: 1279px) {
+ 
+ }
+ 
+ @media only screen and (min-width: 1280px)  {
+     
+ }
