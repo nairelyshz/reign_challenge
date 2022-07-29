@@ -1,46 +1,30 @@
-/* You can add global styles to this file, and also import other style files */
-body {
-    margin: 0;
-}
-.container {
-    display: flex;
-    flex-direction: column;
-    padding: 0 1rem 0;
-    margin: 0 1rem 0;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-/** system **/
-
-.row {
-    display: flex;
-    flex-direction: row;
+.header {
+    height: 114px;
+    background-image: linear-gradient(#ececec, #ffffff);
+    border-bottom: 1px solid rgba(0, 21, 41, 0.12);
 }
 
-.col {
-    flex-direction: column;
-}
-
-.col-6 {
-    width: 50%;
-}
-
-.justify-center {
-    justify-content: center;
-}
-
-.align-item-center {
-    align-items: center;
+.header_title {
+    font-size: 28px;
+    margin-left: 100px;
 }
 
 /* RESPONSIVE */
 @media only screen and (max-width: 959.98px) {
     .header {
-     justify-content: center;    
+        justify-content: center;
+    }
+    .header_title {
+        margin-left: 0px;
     }
  }
  
  @media only screen and (min-width: 960px) and (max-width: 1279px) {
- 
+    
  }
  
  @media only screen and (min-width: 1280px)  {

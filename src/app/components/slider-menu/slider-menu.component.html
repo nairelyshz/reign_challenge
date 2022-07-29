@@ -1,4 +1,4 @@
-<div class="row">
-    <div class="tab">All</div>
-    <div class="tab">My faves</div>
+<div class="flex flex-row tabs">
+    <div class="tab" [class.active_tab-left]="currentTab === 0" (click)="changeTab(0)">All</div>
+    <div class="tab" [class.active_tab-right]="currentTab === 1" (click)="changeTab(1)">My faves</div>
 </div>

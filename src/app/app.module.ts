@@ -7,6 +7,9 @@ import { NewsCardComponent } from './components/news-card/news-card.component';
 import { SliderMenuComponent } from './components/slider-menu/slider-menu.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './pages/home/home.component';
+import { InfiniteScrollModule } from "ngx-infinite-scroll";
+import { FormsModule } from '@angular/forms';
+import { LoaderComponent } from './components/loader/loader.component';
 
 @NgModule({
   declarations: [
@@ -14,11 +17,15 @@ import { HomeComponent } from './pages/home/home.component';
     NewsCardComponent,
     SliderMenuComponent,
     HeaderComponent,
-    HomeComponent
+    HomeComponent,
+    LoaderComponent,
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    InfiniteScrollModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

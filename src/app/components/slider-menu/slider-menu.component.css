@@ -1,10 +1,30 @@
+.tabs {
+    border: 0.5px solid #d6d6d6;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+
+}
 .tab {
-    width: 98px;
+    width: 150px;
     height: 31px;
     padding: 3px 39px 0 40px;
-    border-radius: 2px;
-    border: solid 1px #1797ff;
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+
+}
+
+.active_tab-left {
+    color: #1797ff ;
+    border: solid 1px #1797ff;
+    border-right: 1px solid #d6d6d6;
+}
+
+.active_tab-right {
+    color: #1797ff ;
+    border: solid 1px #1797ff;
+    border-left: 1px solid #d6d6d6;
 }

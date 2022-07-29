@@ -1,4 +1,16 @@
-<p>
-    {{info.author}}
-    {{info.comment_text}}
-</p>
+<div class="w-full flex rounded-lg border-solid border-2 border-gray-400 card">
+    <a
+        class="flex flex-col w-3/4 p-5 search-results"
+        [href]="info.story_url"
+        target="_blank"
+    >
+        <div class="flex items-center time-author">
+            <img class="time mr-2" src="assets/iconmonstr-time-2@3x.png" />{{info.created_at}} by {{info.author}}</div>
+        <div>{{info.story_title}}</div>
+    </a>
+    <div class="flex justify-center items-center w-1/4 bg-like">
+        <img class="like" *ngIf="!info.like" (click)="changeLike()" src="assets/iconmonstr-favorite-2@2x.png" />
+        <img class="like" *ngIf="info.like" (click)="changeLike()" src="assets/iconmonstr-favorite-3@2x.png" />
+
+    </div>
+</div>

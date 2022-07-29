@@ -1,17 +1,30 @@
-<div class="container">
-    <div class="row justify-center align-item-center menu-section">
-        <app-slider-menu></app-slider-menu>
+<div class="container mx-auto pl-3 pr-3 pb-6">
+    <div class="flex flex-row justify-center pt-8 pb-8">
+        <app-slider-menu (onChangeTab)="changeTab($event)"></app-slider-menu>
     </div>
-    <div class="row">
-        <select>
+   
+    <div class="flex mt-5 mb-8">
+        <select
+            (change)="onChangeSelection()"
+            [(ngModel)]="selectionNews" 
+            class="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500  p-2.5 ">
+            <option value="" selected>Select your news</option>
             <option value="angular">Angular</option>
             <option value="reactjs">Reactjs</option>
             <option value="vuejs">Vuejs</option>
         </select>
+
     </div>
-    <div class="row">
-        <div class="col" *ngFor="let post of posts">
-            <app-news-card [info]="post"></app-news-card>
-        </div>
+    <div
+        class="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-4"
+        infiniteScroll
+        [infiniteScrollDistance]="2"
+        [infiniteScrollThrottle]="50"
+        (scrolled)="onScroll()"
+    >
+        <app-news-card *ngFor="let post of posts" [info]="post"></app-news-card>
+    </div>
+    <div class="flex justify-center" *ngIf="showLoader">
+        <app-loader></app-loader>
     </div>
 </div>
