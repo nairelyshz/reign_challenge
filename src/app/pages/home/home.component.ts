@@ -83,9 +83,12 @@ export class HomeComponent implements OnInit {
   async loadFavNews() {
     this.posts = [];
     const favs = await this.newsService.getFavs(this.selectionNews);
-    for(let key of Object.keys(favs)) {
-      this.posts.push(favs[key]);
+    if (favs) {
+      for(let key of Object.keys(favs)) {
+        this.posts.push(favs[key]);
+      }
     }
+    
   }
 
 }

@@ -5,7 +5,9 @@
         target="_blank"
     >
         <div class="flex items-center time-author">
-            <img class="time mr-2" src="assets/iconmonstr-time-2@3x.png" />{{info.created_at}} by {{info.author}}</div>
+            <img class="time mr-2" src="assets/iconmonstr-time-2@3x.png" />
+            
+            {{info.created_at | dateago}} by {{info.author}}</div>
         <div>{{info.story_title}}</div>
     </a>
     <div class="flex justify-center items-center w-1/4 bg-like">

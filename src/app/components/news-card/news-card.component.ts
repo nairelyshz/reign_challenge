@@ -26,7 +26,6 @@ export class NewsCardComponent implements OnInit {
 
   async ngOnInit(): Promise<void> {
     this.info['like'] = await this.verifyLike();
-    console.log("info", this.info.like);
   }
 
   verifyLike() {

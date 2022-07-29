@@ -10,6 +10,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { InfiniteScrollModule } from "ngx-infinite-scroll";
 import { FormsModule } from '@angular/forms';
 import { LoaderComponent } from './components/loader/loader.component';
+import { DateagoPipe } from './pipes/dateago.pipe';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,8 @@ import { LoaderComponent } from './components/loader/loader.component';
     HeaderComponent,
     HomeComponent,
     LoaderComponent,
+    DateagoPipe,
+    
     
   ],
   imports: [
@@ -28,6 +31,9 @@ import { LoaderComponent } from './components/loader/loader.component';
     FormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports: [
+    DateagoPipe
+  ]
 })
 export class AppModule { }

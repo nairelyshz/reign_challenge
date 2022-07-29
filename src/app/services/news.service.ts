@@ -27,7 +27,6 @@ export class NewsService {
       favs = {};
       favs[key] = value;
     }
-    console.log(favs, "guardar")
     localStorage.setItem(query, JSON.stringify(favs));
   }
 
